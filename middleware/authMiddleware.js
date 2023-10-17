@@ -1,10 +1,10 @@
 const jwt = require('jsonwebtoken');
-const User = require('../models/User'); // Import your User model here
+const User = require('../models/User'); // Import User model here
 
 const authMiddleware = async (req, res, next) => {
   try {
-    // Get the JWT token from cookies or headers (adjust as needed)
-    const token = req.cookies.token || req.headers.authorization;
+    // Get the JWT token from cookies or headers
+    const token = req.cookies.token
 
     if (!token) {
       return res.status(401).json({ message: 'Authentication required' });
