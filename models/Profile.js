@@ -31,7 +31,6 @@ const profileSchema = new mongoose.Schema({
   profilePicture: {
     type: String
   }
-  // Add other profile fields as needed
 });
 
 module.exports = mongoose.model('Profile', profileSchema);
