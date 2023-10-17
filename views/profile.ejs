@@ -1,0 +1,150 @@
+<!-- Profile Page -->
+<%- include('./partials/header') %>
+
+<div class="container-fluid mt-4">
+    <!-- Three Columns Layout -->
+    <div class="row">
+        <!-- Left Column (Friends List) -->
+        <div class="col-md-3 d-none d-md-block">
+            <!-- User Profile Section -->
+            <div class="bg-light p-3 mb-3">
+                <a href="/profile">
+                    <img src="<%= userProfile.profilePicture %>" alt="User Profile Picture" class="img-fluid rounded-circle mb-2 user-profile-pic">
+                </a>
+                <h5><%= userProfile.fullName %></h5>
+                <!-- Additional user information here -->
+            </div>
+
+            <!-- List of Friends -->
+            <div class="bg-light p-3">
+                <h5>Friends</h5>
+                <!-- List of friends here -->
+                <ul>
+                    <!-- Friend 1 -->
+                    <li class="d-flex align-items-center">
+                        <img src="./images/profile3.webp" alt="Friend 1" class="img-fluid rounded-circle mr-2" style="width: 40px; height: 40px; margin-bottom: 10px;">
+                        Yogi
+                    </li>
+                    <!-- Friend 2 -->
+                    <li class="d-flex align-items-center">
+                        <img src="./images/profile2.jfif" alt="Friend 2" class="img-fluid rounded-circle mr-2" style="width: 40px; height: 40px; margin-bottom: 10px;">
+                        Raju
+                    </li>
+                    <!-- Friend 3 -->
+                    <li class="d-flex align-items-center">
+                        <img src="./images/profile1.jpg" alt="Friend 3" class="img-fluid rounded-circle mr-2" style="width: 40px; height: 40px; margin-bottom: 10px;">
+                        Farhan
+                    </li>
+                    <!-- Add more friends as list items -->
+                </ul>
+            </div>
+        </div>
+
+        <!-- Middle Column (User's Profile) -->
+        <div class="col-md-6">
+            <a href="/edit-profile" class="btn btn-primary btn-sm float-right">
+                <i class="fas fa-edit"></i> Edit Profile
+            </a>
+            <!-- Main Section (User's Profile) -->
+            <div class="bg-light p-3">
+                <!-- User's Profile Section -->
+                <a href="/profile"></a><img src="<%= userProfile.profilePicture %>" alt="User Profile Picture" class="img-fluid rounded-circle mb-2 user-profile-pic"></a>
+                <h5><%= userProfile.fullName %></h5>
+                <p>Bio: <%= userProfile.bio %></p>
+                <p>Email: <%= userProfile.email %></p>
+                <p>Course: <%= userProfile.course %></p>
+                <p>Roll No: <%= userProfile.rollNo %></p>
+                <p>Semester: <%= userProfile.semester %></p>
+                <!-- Add more user details as needed -->
+
+                <!-- User's Posts or Activities Here -->
+                <div class="bg-light p-3 mt-4">
+                    <!-- Post 1 -->
+                    <div class="mb-3">
+                        <h5 class="card-title">Real Student</h5>
+                        <p class="card-text">Posted a new photo</p>
+                        <img src="./images/profile8.jpeg" alt="Post Image 1" class="img-fluid mb-3">
+                        <p class="card-text">Caption: Me and my friends.</p>
+                        <div class="input-group mb-3">
+                            <input type="text" class="form-control" placeholder="Add a comment...">
+                            <div class="input-group-append">
+                                <button class="btn btn-outline-secondary" type="button">
+                                    <i class="fas fa-thumbs-up"></i> <!-- Replace with your like icon -->
+                                </button>
+                                <button class="btn btn-outline-secondary" type="button">
+                                    <i class="fas fa-comment"></i> <!-- Replace with your comment icon -->
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <!-- Post 2 -->
+                    <div class="mb-3">
+                        <h5 class="card-title">Real Student</h5>
+                        <p class="card-text">Shared a link</p>
+                        <a href="#">Link to the shared content</a>
+                        <p>Caption: Check out the downfall of Typescript.</p>
+                        <div class="input-group mb-3">
+                            <input type="text" class="form-control" placeholder="Add a comment...">
+                            <div class="input-group-append">
+                                <button class="btn btn-outline-secondary" type="button">
+                                    <i class="fas fa-thumbs-up"></i> <!-- Replace with your like icon -->
+                                </button>
+                                <button class="btn btn-outline-secondary" type="button">
+                                    <i class="fas fa-comment"></i> <!-- Replace with your comment icon -->
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <!-- Add more static posts as needed -->
+                </div>
+                <!-- You can display user posts, updates, or other profile-related content here -->
+            </div>
+        </div>
+
+        <!-- Right Column (Chat/Conversations) -->
+        <div class="col-md-3 d-none d-md-block">
+            <!-- List of Chat Conversations -->
+            <div class="bg-light p-3">
+                <h5>Chat</h5>
+                <!-- List of chat conversations here -->
+                <ul>
+                    <!-- Conversation 1 -->
+                    <li class="mb-2">
+                        <div class="d-flex align-items-center">
+                            <img src="./images/profile3.webp" alt="User Profile Picture" class="img-fluid rounded-circle mr-2" style="width: 40px; height: 40px;">
+                            <div>
+                                <h6>Yogi</h6>
+                                <p class="mb-0">God forbid, someone actualy decides to do their jobs around here!</p>
+                            </div>
+                        </div>
+                    </li>
+                    <!-- Conversation 2 -->
+                    <li class="mb-2">
+                        <div class="d-flex align-items-center">
+                            <img src="./images/profile2.jfif" alt="User 2 Profile Picture" class="img-fluid rounded-circle mr-2" style="width: 40px; height: 40px;">
+                            <div>
+                                <h6>Raju</h6>
+                                <p class="mb-0">I think this university is a scam</p>
+                            </div>
+                        </div>
+                    </li>
+                    <!-- Conversation 3 -->
+                    <li class="mb-2">
+                        <div class="d-flex align-items-center">
+                            <img src="./images/profile1.jpg" alt="User 3 Profile Picture" class="img-fluid rounded-circle mr-2" style="width: 40px; height: 40px;">
+                            <div>
+                                <h6>Farhan</h6>
+                                <p class="mb-0">I need my catalytic converter back</p>
+                            </div>
+                        </div>
+                    </li>
+                    <!-- Add more conversations as list items -->
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<%- include('./partials/footer') %>

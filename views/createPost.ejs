@@ -1,0 +1,58 @@
+<%- include('./partials/header') %>
+
+<div class="container mt-4">
+    <div class="row">
+        <div class="col-md-3">
+            <!-- Left Column (Navigation or Profile Picture) -->
+            <!-- You can add navigation or user profile picture here if needed -->
+        </div>
+        <div class="col-md-6">
+            <!-- Middle Column (Create Post Form) -->
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Create Post</h5>
+                    <form action="/posts/create" method="POST" enctype="multipart/form-data">
+                        <!-- Caption -->
+                        <div class="mb-3">
+                            <label for="postCaption" class="form-label">Caption</label>
+                            <textarea class="form-control" id="postCaption" name="postCaption" rows="3" required></textarea>
+                        </div>
+
+                        <!-- Image Upload -->
+                        <div class="mb-3">
+                            <label for="postImage" class="form-label">Upload Image</label>
+                            <input type="file" class="form-control" id="postImage" name="postImage">
+                        </div>
+
+                        <!-- Video Embed -->
+                        <div class="mb-3">
+                            <label for="postVideo" class="form-label">Embed Video (e.g., YouTube link)</label>
+                            <input type="text" class="form-control" id="postVideo" name="postVideo">
+                        </div>
+
+                        <!-- Link -->
+                        <div class="mb-3">
+                            <label for="postLink" class="form-label">Link</label>
+                            <input type="text" class="form-control" id="postLink" name="postLink">
+                        </div>
+
+                        <!-- Video Upload -->
+                        <div class="mb-3">
+                            <label for="postVideo" class="form-label">Upload Video (Max size: 20MB)</label>
+                            <input type="file" class="form-control" id="postVideo" name="postVideo" accept="video/*" required>
+                        </div>
+
+                        <!-- Submit Button -->
+                        <button type="submit" class="btn btn-primary">Create Post</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <!-- Right Column (Optional) -->
+            <!-- You can add additional information or widgets here if needed -->
+        </div>
+    </div>
+</div>
+
+<%- include('./partials/footer') %>

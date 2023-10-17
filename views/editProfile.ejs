@@ -1,0 +1,61 @@
+<%- include('./partials/header') %>
+
+<div class="container mt-4">
+    <div class="row">
+        <div class="col-md-3">
+            <!-- Left Column (Navigation or Profile Picture) -->
+            <!-- You can add navigation or user profile picture here if needed -->
+        </div>
+        <div class="col-md-6">
+            <!-- Middle Column (Edit Profile Form) -->
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Edit Profile</h5>
+                    <form action="/edit-profile" method="post" >
+                        <!-- Editable Profile Fields -->
+                        <div class="form-group">
+                            <label for="fullName">Full Name</label>
+                            <input type="text" class="form-control" id="fullName" name="fullName" placeholder="Enter your full name">
+                        </div>
+                        <div class="form-group">
+                            <label for="bio">Bio</label>
+                            <textarea class="form-control" id="bio" rows="3" name="bio" placeholder="Tell something about yourself"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="profilePicture">Profile Picture</label>
+                            <input type="file" name="profilePicture" class="form-control-file" id="profilePicture">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" name="email" id="email" placeholder="user@example.com">
+                        </div>
+                        <div class="form-group">
+                            <label for="course">Course</label>
+                            <input type="text" name="course" id="course" placeholder="B. Tech CS(Specialization(if any))">
+                        </div>
+                        <div class="form-group">
+                            <label for="roll-no">
+                                Roll Number
+                            </label>
+                            <input type="number" name="rollNo" id="roll-no" maxlength="15" minlength="15" placeholder="2020101011XXXXX">
+                        </div>
+                        <div class="form-group">
+                            <label for="semester">Semester</label>
+                            <input type="text" name="semester" id="semester" placeholder="8th">
+                        </div>
+                        <!-- Add more editable profile fields as needed -->
+
+                        <!-- Save Button -->
+                        <button type="submit" class="btn btn-primary">Save Changes</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <!-- Right Column (Optional) -->
+            <!-- You can add additional information or widgets here if needed -->
+        </div>
+    </div>
+</div>
+
+<%- include('./partials/footer') %>

@@ -1,0 +1,151 @@
+<%- include('./partials/header') %>
+
+<div class="container-fluid mt-4">
+    <!-- Three Columns Layout -->
+    <div class="row">
+        <!-- Left Column (User Profile and Friends) -->
+        <div class="col-md-3 d-none d-md-block">
+            <!-- User Profile Section -->
+            <div class="bg-light p-3 mb-3">
+                <a href="/profile">
+                    <img src="./images/profile5.jfif" alt="User Profile Picture" class="img-fluid rounded-circle mb-2 user-profile-pic">
+                </a>
+                <h5>Real Student</h5>
+                <!-- Additional user information here -->
+            </div>
+
+            <!-- List of Friends -->
+            <div class="bg-light p-3">
+                <h5>Friends</h5>
+                <!-- List of friends here -->
+                <ul>
+                    <!-- Friend 1 -->
+                    <li class="d-flex align-items-center">
+                        <img src="./images/profile3.webp" alt="Friend 1" class="img-fluid rounded-circle mr-2" style="width: 40px; height: 40px; margin-bottom: 10px;">
+                        Yogi
+                    </li>
+                    <!-- Friend 2 -->
+                    <li class="d-flex align-items-center">
+                        <img src="./images/profile2.jfif" alt="Friend 2" class="img-fluid rounded-circle mr-2" style="width: 40px; height: 40px; margin-bottom: 10px;">
+                        Raju
+                    </li>
+                    <!-- Friend 3 -->
+                    <li class="d-flex align-items-center">
+                        <img src="./images/profile1.jpg" alt="Friend 3" class="img-fluid rounded-circle mr-2" style="width: 40px; height: 40px; margin-bottom: 10px;">
+                        Farhan
+                    </li>
+                    <!-- Add more friends as list items -->
+                </ul>
+            </div>
+        </div>
+
+        <!-- Middle Column (News Feed Section) -->
+    <div class="col-md-6">
+    <!-- News Feed Section -->
+        <div class="bg-light p-3">
+        <!-- Post 1 -->
+        <div class="mb-3">
+            <img src="./images/profile3.webp" alt="Friend 1" class="img-fluid rounded-circle mr-2" style="width: 40px; height: 40px; margin-bottom: 10px;">
+            <h5 class="card-title">Yogi</h5>
+            <p class="card-text">Posted a new photo</p>
+            <img src="./images/profile6.jpg" alt="Post Image 1" class="img-fluid mb-3">
+            <p class="card-text">Caption: I look exactly like him.</p>
+            
+            <!-- Comment Input and Buttons (Post 1) -->
+            <div class="input-group mb-3">
+                <input type="text" class="form-control" placeholder="Add a comment...">
+                <div class="input-group-append">
+                    <button class="btn btn-outline-secondary" type="button">
+                        <i class="fas fa-thumbs-up"></i> <!-- Replace with your like icon -->
+                    </button>
+                    <button class="btn btn-outline-secondary" type="button">
+                        <i class="fas fa-comment"></i> <!-- Replace with your comment icon -->
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Post 2 -->
+        <div class="mb-3">
+            <!-- ... (Content of Post 2) ... -->
+            <img src="./images/profile1.jpg" alt="Friend 3" class="img-fluid rounded-circle mr-2" style="width: 40px; height: 40px; margin-bottom: 10px;">
+            <h5 class="card-title">Farhan</h5>
+            <p class="card-text">Shared a link</p>
+            <a href="https://bun.sh">Link to the shared content</a>
+            <p>Caption: Check out Bun.js</p>
+            <!-- Comment Input and Buttons (Post 2) -->
+            <div class="input-group mb-3">
+                <input type="text" class="form-control" placeholder="Add a comment...">
+                <div class="input-group-append">
+                    <button class="btn btn-outline-secondary" type="button">
+                        <i class="fas fa-thumbs-up"></i> <!-- Replace with your like icon -->
+                    </button>
+                    <button class="btn btn-outline-secondary" type="button">
+                        <i class="fas fa-comment"></i> <!-- Replace with your comment icon -->
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Pagination -->
+            <nav aria-label="Page navigation">
+                <ul class="pagination justify-content-center">
+                    <li class="page-item disabled">
+                        <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Previous</a>
+                    </li>
+                    <li class="page-item"><a class="page-link" href="#">1</a></li>
+                    <li class="page-item"><a class="page-link" href="#">2</a></li>
+                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                    <li class="page-item">
+                        <a class="page-link" href="#">Next</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+
+        <!-- Right Column (Chat/Conversations) -->
+        <div class="col-md-3 d-none d-md-block">
+            <!-- List of Chat Conversations -->
+            <div class="bg-light p-3">
+                <h5>Chat</h5>
+                <!-- List of chat conversations here -->
+                <ul>
+                    <!-- Conversation 1 -->
+                    <li class="mb-2">
+                        <div class="d-flex align-items-center">
+                            <img src="./images/profile3.webp" alt="User Profile Picture" class="img-fluid rounded-circle mr-2" style="width: 40px; height: 40px;">
+                            <div>
+                                <h6>Yogi</h6>
+                                <p class="mb-0">Example text dot dot dot</p>
+                            </div>
+                        </div>
+                    </li>
+                    <!-- Conversation 2 -->
+                    <li class="mb-2">
+                        <div class="d-flex align-items-center">
+                            <img src="./images/profile2.jfif" alt="User 2 Profile Picture" class="img-fluid rounded-circle mr-2" style="width: 40px; height: 40px;">
+                            <div>
+                                <h6>Raju</h6>
+                                <p class="mb-0">I'm starting to suspect that this is a fake account</p>
+                            </div>
+                        </div>
+                    </li>
+                    <!-- Conversation 3 -->
+                    <li class="mb-2">
+                        <div class="d-flex align-items-center">
+                            <img src="./images/profile1.jpg" alt="User 3 Profile Picture" class="img-fluid rounded-circle mr-2" style="width: 40px; height: 40px;">
+                            <div>
+                                <h6>Farhan</h6>
+                                <p class="mb-0">We're gonna have to deal with Raju(if you know what i mean)</p>
+                            </div>
+                        </div>
+                    </li>
+                    <!-- Add more conversations as list items -->
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<%- include('./partials/footer') %>
