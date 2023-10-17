@@ -1,4 +1,3 @@
-// controllers/authController.js
 const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
 const User = require('../models/User');
@@ -23,8 +22,8 @@ exports.renderEditProfile = async (req, res) => {
 
 exports.renderProfile = async (req, res) => {
   try {
-    // Get the user's ID from the session or wherever you store it
-    const userId = req.user._id; // Adjust this based on how you store user IDs
+    // Get the user's ID
+    const userId = req.user._id;
 
     // Fetch the user's profile data from the database
     const userProfile = await Profile.findOne({ user: userId });
@@ -97,7 +96,7 @@ exports.loginUser = async (req, res) => {
     const token = jwt.sign({ userId: user._id }, process.env.JWT_SECRETKEY, { expiresIn: '5d' });
 
     res.cookie('token', token);
-    res.redirect('/home'); // Replace with the appropriate dashboard route
+    res.redirect('/home');
   } catch (error) {
     res.render('login', { errorMessage: 'An error occurred', error: error.message });
   }
