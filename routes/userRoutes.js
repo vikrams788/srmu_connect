@@ -4,7 +4,7 @@ const authMiddleware = require('../middleware/authMiddleware');
 
 const router = express.Router();
 
-//get routes
+
 //public routes
 router.get('/signup', userController.renderSignupForm);
 router.get('/login', userController.renderLoginForm);
